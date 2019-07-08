@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping(value={"/*inicio*", ""})
+@RequestMapping(value={"/*frio*", ""})
 public class InicioController {
 	
 	private String view;
@@ -16,12 +16,12 @@ public class InicioController {
 	@RequestMapping("")
 	private ModelAndView initDefault(HttpServletRequest arg0,
 			HttpServletResponse arg1) throws Exception {
-		arg1.sendRedirect("/inicio");
+		arg1.sendRedirect("/frio");
 		return null;
 
 	}
 	
-	@RequestMapping(value={"inicio", "inicioAdmin", "inicioManager"})
+	@RequestMapping(value={"frio"})
 	private ModelAndView inicioInit(HttpServletRequest arg0,
 			HttpServletResponse arg1) throws Exception {
 		
