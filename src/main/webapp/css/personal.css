@@ -1,0 +1,42 @@
+.logo{
+  height: 28px;
+  font-size: 32px;
+}
+.logo span{
+  padding: 10px;
+  margin: 0;
+  font-weight: bold;
+}
+.logo .span_1{
+  color: white;
+  background-color: black;
+}
+.logo .span_2{
+  color: lightblue;
+  background-color: black;
+}
+#header{
+  padding-bottom: 0;
+}
+.open-hour-wrap{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 375px){
+  .logo{
+    height: 20px;
+    font-size: 20px;
+  }
+  .logo span{
+    padding: 5px;
+  }
+  .header-top {
+    padding: 0;
+  }
+  .header-top .header-top-right {
+    padding-right: 0;
+  }
+}
