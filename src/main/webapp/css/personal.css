@@ -24,8 +24,25 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+.open-hour-wrap img{
+  width: 22%;
+}
 
-@media (max-width: 375px){
+.banner-content img{
+  height: 44px;
+  border: 1px solid white;
+  margin-top: -2px;
+}
+.open-hour-area{
+  margin-top: -50px;
+}
+
+.feature-area.section-gap,
+.footer-area.section-gap{
+  padding: 40px 0 !important;
+}
+
+@media (max-width: 415px){
   .logo{
     height: 20px;
     font-size: 20px;
@@ -38,5 +55,18 @@
   }
   .header-top .header-top-right {
     padding-right: 0;
+  }
+}
+
+@media (max-width: 360px){
+  .logo{
+    height: 18px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767.98px){
+  .banner-area .fullscreen {
+      height: 350px !important;
   }
 }
