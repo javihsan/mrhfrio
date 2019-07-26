@@ -42,6 +42,13 @@
   padding: 40px 0 !important;
 }
 
+.banner-area .container > div {
+  background-image: url(../img/remote.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 76%;
+}
+
 @media (max-width: 415px){
   .logo{
     height: 20px;
