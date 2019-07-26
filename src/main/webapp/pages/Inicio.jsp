@@ -6,7 +6,7 @@ response.setHeader("Pragma", "no-cache");
 response.setHeader("Cache-Control", "no-cache");
 response.setHeader("Expires", "0");
 %>
-		<!DOCTYPE html>
+			<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
 		<!-- Mobile Specific Meta -->
@@ -16,7 +16,7 @@ response.setHeader("Expires", "0");
 		<!-- Author Meta -->
 		<meta name="author" content="colorlib">
 		<!-- Meta Description -->
-		<meta name="description" content="reparacion reparación reparaciones Madrid aire acondicionado frio frío equipo mantenimiento Comunidad de Madrid>
+		<meta name="description" content="reparacion reparaciÃ³n reparaciones Madrid aire acondicionado frio frÃ­o equipo mantenimiento Comunidad de Madrid>
 		<!-- Meta Keyword -->
 		<meta name="keywords" content="">
 		<!-- meta character set -->
@@ -37,49 +37,29 @@ response.setHeader("Expires", "0");
 			<link rel="stylesheet" href="css/jquery-ui.css">			
 			<link rel="stylesheet" href="css/owl.carousel.css">
 			<link rel="stylesheet" href="css/main.css">
+			<link rel="stylesheet" href="css/personal.css">
 		</head>
 		<body>	
 			  <header id="header" id="home">
 		  		<div class="header-top">
 		  			<div class="container">
 				  		<div class="row align-items-center">
-				  			<div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
-				        		Reparaciones MRH		
+				  			<div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding logo">
+				        		<span class="span_1">Reparaciones</span><span class="span_2">MRH</span>		
 				  			</div>
 				  			<div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
 								<a class="btns" href="tel:670 599 843">670 599 843</a>
-				  				<a class="btns" href="mailto:soporte@jatetu.com">mariano10mad@gmail.com</a>		
+				  				<a class="btns" href="mailto:mariano10mad@gmail.com">mariano10mad@gmail.com</a>		
 				  				<a class="icons" href="tel:670 599 843">
-				  					<span class="lnr lnr-phone-handset"></span> 670 599 843
+				  					<span class="lnr lnr-phone-handset"></span>
 				  				</a>
-				  				<a class="icons" href="mailto:soporte@jatetu.com">
+				  				<a class="icons" href="mailto:mariano10mad@gmail.com">
 				  					<span class="lnr lnr-envelope"></span>
 				  				</a>		
 				  			</div>
 				  		</div>			  					
 		  			</div>
 				</div>
-			    <!--<div class="container main-menu">
-			    	<div class="row align-items-center justify-content-between d-flex">
-				      <nav id="nav-menu-container">
-				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="index.html">Home</a></li>
-				          <li><a href="about.html">Acerca de</a></li>
-				          <li><a href="services.html">Servicios</a></li>
-				          <li><a href="opening-hour.html">Horario de apertura</a></li>
-				          <li><a href="pricing.html">Precios</a></li>				          	          
-				          <li><a href="elements.html">Trabajos</a></li>				          	          
-				          <li><a href="contact.html">Contacto</a></li>
-				        </ul>
-				      </nav>--><!-- #nav-menu-container -->
-			      	<!--<div class="menu-social-icons">
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-dribbble"></i></a>
-						<a href="#"><i class="fa fa-behance"></i></a>
-					</div>	    		
-			    	</div>
-			    </div>-->
 			  </header><!-- #header -->
 
 			<!-- start banner Area -->
@@ -88,12 +68,15 @@ response.setHeader("Expires", "0");
 				<div class="container">
 					<div class="row fullscreen d-flex justify-content-center align-items-center">
 						<div class="banner-content col-lg-9 col-md-12 justify-content-center">
-							<a href="tel:670 599 843" class="primary-btn header-btn text-uppercase mt-10">¡Llámenos! 670 599 843</a>
+							<a href="tel:670 599 843">
+								<img src="img/CAM_flag.svg" />
+							</a>
+							<a href="tel:670 599 843" class="primary-btn header-btn text-uppercase mt-10">Â¡LlÃ¡menos! 670 599 843</a>
 							<h1>
-								Reparación de sus equipos de Aire Acondicionado
+								ReparaciÃ³n de sus equipos de Aire Acondicionado
 							</h1>
 							<p class="text-white mx-auto">
-								Más de 25 años de experiencia. Todas las marcas. 24 horas al día. Toda la Comunidad de Madrid.	
+								MÃ¡s de 25 aÃ±os de experiencia. Todas las marcas. Desplazamiento gratuito. Toda la Comunidad de Madrid.	
 							</p>
 						</div>											
 					</div>
@@ -102,31 +85,77 @@ response.setHeader("Expires", "0");
 			<!-- End banner Area -->
 
 			<!-- Start open-hour Area -->
-			<!--<section class="open-hour-area">
+			<section class="open-hour-area">
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-lg-12 open-hour-wrap">
-							<h1>Horarios de contacto</h1>
-							<p>
-								Texto
-							</p>
-							<a class="open-btn" href="#"> <span class="circle"></span>Texto</a>
-							<div class="date-list d-flex flex-row justify-content-center">
-								<ul class="colm-1">
-									<li>Lunes - Viernes</li>
-									<li>Sábado</li>
-									<li>Domingo</li>
-								</ul>
-								<ul class="colm-2">
-									<li><span>:</span>   10:00am a 05:00pm</li>
-									<li><span>:</span>   12:00am a 03:00pm</li>
-									<li><span>:</span>   cerrado</li>
-								</ul>								
-							</div>
+							<img src="img/logos/logotipo-aeg.png" />
+							<img src="img/logos/logotipo-ariston.png" />
+							<img src="img/logos/logotipo-aspes.png" />
+							<img src="img/logos/logotipo-balay.png" />
+							<img src="img/logos/logotipo-baxi.png" />
+							<img src="img/logos/logotipo-baxiroca.png" />
+							<img src="img/logos/logotipo-beko.png" />
+							<img src="img/logos/logotipo-beretta.png" />
+							<img src="img/logos/logotipo-biasi.png" />
+							<img src="img/logos/logotipo-bosch.png" />
+							<img src="img/logos/logotipo-buderus.png" />
+							<img src="img/logos/logotipo-candy.png" />
+							<img src="img/logos/logotipo-carrier.png" />
+							<img src="img/logos/logotipo-cata.png" />
+							<img src="img/logos/logotipo-chaffoteaux.png" />
+							<img src="img/logos/logotipo-cointra.png" />
+							<img src="img/logos/logotipo-corbero.png" />
+							<img src="img/logos/logotipo-daewoo.png" />
+							<img src="img/logos/logotipo-daikin.png" />
+							<img src="img/logos/logotipo-dedietrich.png" />
+							<img src="img/logos/logotipo-domusa.png" />
+							<img src="img/logos/logotipo-ecron.png" />
+							<img src="img/logos/logotipo-edesa.png" />
+							<img src="img/logos/logotipo-electrolux.png" />
+							<img src="img/logos/logotipo-eurofred.png" />
+							<img src="img/logos/logotipo-fagor.png" />
+							<img src="img/logos/logotipo-fer.png" />
+							<img src="img/logos/logotipo-ferroli.png" />
+							<img src="img/logos/logotipo-franke.png" />
+							<img src="img/logos/logotipo-fujitsu.png" />
+							<img src="img/logos/logotipo-haier.png" />
+							<img src="img/logos/logotipo-hermann.png" />
+							<img src="img/logos/logotipo-hoover.png" />
+							<img src="img/logos/logotipo-indesit.png" />
+							<img src="img/logos/logotipo-junkers.png" />
+							<img src="img/logos/logotipo-lennox.png" />
+							<img src="img/logos/logotipo-lg.png" />
+							<img src="img/logos/logotipo-liebherr.png" />
+							<img src="img/logos/logotipo-manaut.png" />
+							<img src="img/logos/logotipo-mepamsa.png" />
+							<img src="img/logos/logotipo-miele.png" />
+							<img src="img/logos/logotipo-mitsubishi.png" />
+							<img src="img/logos/logotipo-neckar.png" />
+							<img src="img/logos/logotipo-negarra.png" />
+							<img src="img/logos/logotipo-newpol.png" />
+							<img src="img/logos/logotipo-orbegozo.png" />
+							<img src="img/logos/logotipo-otsein.png" />
+							<img src="img/logos/logotipo-panasonic.png" />
+							<img src="img/logos/logotipo-roca.png" />
+							<img src="img/logos/logotipo-saivod.png" />
+							<img src="img/logos/logotipo-samsung.png" />
+							<img src="img/logos/logotipo-saunierduval.png" />
+							<img src="img/logos/logotipo-siemens.png" />
+							<img src="img/logos/logotipo-smeg.png" />
+							<img src="img/logos/logotipo-teka.png" />
+							<img src="img/logos/logotipo-tifell.png" />
+							<img src="img/logos/logotipo-toshiba.png" />
+							<img src="img/logos/logotipo-vaillant.png" />
+							<img src="img/logos/logotipo-viessmann.png" />
+							<img src="img/logos/logotipo-whirlpool.png" />
+							<img src="img/logos/logotipo-wolf.png" />
+							<img src="img/logos/logotipo-zanussi.png" />
+							<img src="img/logos/logotipo-muchasmaz.png" />
 						</div>
 					</div>
 				</div>	
-			</section>-->
+			</section>
 			<!-- End open-hour Area -->
 			
 			
@@ -135,7 +164,7 @@ response.setHeader("Expires", "0");
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="col-md-12 pb-40 header-text text-center">
-							<h1 class="pb-10">Qué ofrecemos a nuestros clientes</h1>
+							<h1 class="pb-10">QuÃ© ofrecemos a nuestros clientes</h1>
 							<p>
 								Texto.
 							</p>
@@ -145,7 +174,7 @@ response.setHeader("Expires", "0");
 						<div class="col-lg-3 col-md-6">
 							<div class="single-service">
 								<img class="img-fluid" src="img/b3.jpg" alt="">
-								<a href="#"><h4>Títular</h4></a>
+								<a href="#"><h4>TÃ­tular</h4></a>
 								<p>
 									Texto
 								</p>
@@ -154,7 +183,7 @@ response.setHeader("Expires", "0");
 						<div class="col-lg-3 col-md-6">
 							<div class="single-service">
 								<img class="img-fluid" src="img/b3.jpg" alt="">
-								<a href="#"><h4>Títular</h4></a>
+								<a href="#"><h4>TÃ­tular</h4></a>
 								<p>
 									Texto
 								</p>
@@ -163,7 +192,7 @@ response.setHeader("Expires", "0");
 						<div class="col-lg-3 col-md-6">
 							<div class="single-service">
 								<img class="img-fluid" src="img/b3.jpg" alt="">
-								<a href="#"><h4>Títular</h4></a>
+								<a href="#"><h4>TÃ­tular</h4></a>
 								<p>
 									Texto
 								</p>
@@ -172,7 +201,7 @@ response.setHeader("Expires", "0");
 						<div class="col-lg-3 col-md-6">
 							<div class="single-service">
 								<img class="img-fluid" src="img/b3.jpg" alt="">
-								<a href="#"><h4>Títular</h4></a>
+								<a href="#"><h4>TÃ­tular</h4></a>
 								<p>
 									Texto
 								</p>
@@ -189,7 +218,7 @@ response.setHeader("Expires", "0");
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-60 col-lg-8">
 							<div class="title text-center">
-								<h1 class="mb-10">Características que nos hacen únicos</h1>
+								<h1 class="mb-10">CaracterÃ­sticas que nos hacen Ãºnicos</h1>
 								<p></p>
 							</div>
 						</div>
@@ -198,10 +227,10 @@ response.setHeader("Expires", "0");
 						<div class="col-lg-6 col-md-6">
 							<div class="single-feature d-flex flex-row">
 								<div class="icon">
-									<span class="lnr lnr-rocket"></span>
+									<span class="lnr lnr-checkmark-circle"></span>
 								</div>
 								<div class="details">
-									<h4>Atención 24 horas</h4>
+									<h4>Desplazamiento gratuito</h4>
 									<p>
 										
 									</p>
@@ -211,7 +240,7 @@ response.setHeader("Expires", "0");
 						<div class="col-lg-6 col-md-6">
 							<div class="single-feature d-flex flex-row">
 								<div class="icon">
-									<span class="lnr lnr-rocket"></span>
+									<span class="lnr lnr-checkmark-circle"></span>
 								</div>
 								<div class="details">
 									<h4>Todas las marcas</h4>
@@ -224,7 +253,7 @@ response.setHeader("Expires", "0");
 						<div class="col-lg-6 col-md-6">
 							<div class="single-feature d-flex flex-row">
 								<div class="icon">
-									<span class="lnr lnr-rocket"></span>
+									<span class="lnr lnr-checkmark-circle"></span>
 								</div>
 								<div class="details">
 									<h4>Toda la Comunidad de Madrid</h4>
@@ -237,10 +266,10 @@ response.setHeader("Expires", "0");
 						<div class="col-lg-6 col-md-6">
 							<div class="single-feature d-flex flex-row">
 								<div class="icon">
-									<span class="lnr lnr-rocket"></span>
+									<span class="lnr lnr-checkmark-circle"></span>
 								</div>
 								<div class="details">
-									<h4>24/7 emergencias</h4>
+									<h4>GarantÃ­a de los trabajos realizados</h4>
 									<p>
 										
 									</p>
