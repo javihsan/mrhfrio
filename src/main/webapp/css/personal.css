@@ -49,6 +49,10 @@
   background-position-y: 76%;
 }
 
+.banner-area .overlay-bg {
+  background-color: rgba(4,9,30,0.70);
+}
+
 @media (max-width: 415px){
   .logo{
     height: 20px;
