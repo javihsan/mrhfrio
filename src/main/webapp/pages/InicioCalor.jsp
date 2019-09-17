@@ -1,4 +1,12 @@
-	<!DOCTYPE html>
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+<%@page import="org.springframework.web.servlet.support.RequestContextUtils"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%
+response.setHeader("Pragma", "no-cache");
+response.setHeader("Cache-Control", "no-cache");
+response.setHeader("Expires", "0");
+%>
+			<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
 		<!-- Mobile Specific Meta -->
@@ -8,7 +16,7 @@
 		<!-- Author Meta -->
 		<meta name="author" content="colorlib">
 		<!-- Meta Description -->
-		<meta name="description" content="reparacion reparación reparaciones Madrid aire acondicionado frio frío equipo mantenimiento Comunidad de Madrid>
+		<meta name="description" content="reparacion reparación reparaciones Madrid calderas gas gasoil calentadores termos eléctricos Comunidad de Madrid>
 		<!-- Meta Keyword -->
 		<meta name="keywords" content="">
 		<!-- meta character set -->
@@ -65,7 +73,7 @@
 							</a>
 							<a href="tel:670 599 843" class="primary-btn header-btn text-uppercase mt-10">¡Llámenos! 670 599 843</a>
 							<h1>
-								Reparación de sus equipos de Aire Acondicionado
+								Reparación de calderas de gas, gasoil y termos eléctricos
 							</h1>
 							<p class="text-white mx-auto">
 								Más de 25 años de experiencia. Todas las marcas. Desplazamiento gratuito. Toda la Comunidad de Madrid.	
@@ -80,70 +88,8 @@
 			<section class="open-hour-area">
 				<div class="container">
 					<div class="row justify-content-center">
-						<div class="col-lg-12 open-hour-wrap">
-							<img src="img/logos/logotipo-aeg.png" />
-							<img src="img/logos/logotipo-ariston.png" />
-							<img src="img/logos/logotipo-aspes.png" />
-							<img src="img/logos/logotipo-balay.png" />
-							<img src="img/logos/logotipo-baxi.png" />
-							<img src="img/logos/logotipo-baxiroca.png" />
-							<img src="img/logos/logotipo-beko.png" />
-							<img src="img/logos/logotipo-beretta.png" />
-							<img src="img/logos/logotipo-biasi.png" />
-							<img src="img/logos/logotipo-bosch.png" />
-							<img src="img/logos/logotipo-buderus.png" />
-							<img src="img/logos/logotipo-candy.png" />
-							<img src="img/logos/logotipo-carrier.png" />
-							<img src="img/logos/logotipo-cata.png" />
-							<img src="img/logos/logotipo-chaffoteaux.png" />
-							<img src="img/logos/logotipo-cointra.png" />
-							<img src="img/logos/logotipo-corbero.png" />
-							<img src="img/logos/logotipo-daewoo.png" />
-							<img src="img/logos/logotipo-daikin.png" />
-							<img src="img/logos/logotipo-dedietrich.png" />
-							<img src="img/logos/logotipo-domusa.png" />
-							<img src="img/logos/logotipo-ecron.png" />
-							<img src="img/logos/logotipo-edesa.png" />
-							<img src="img/logos/logotipo-electrolux.png" />
-							<img src="img/logos/logotipo-eurofred.png" />
-							<img src="img/logos/logotipo-fagor.png" />
-							<img src="img/logos/logotipo-fer.png" />
-							<img src="img/logos/logotipo-ferroli.png" />
-							<img src="img/logos/logotipo-franke.png" />
-							<img src="img/logos/logotipo-fujitsu.png" />
-							<img src="img/logos/logotipo-haier.png" />
-							<img src="img/logos/logotipo-hermann.png" />
-							<img src="img/logos/logotipo-hoover.png" />
-							<img src="img/logos/logotipo-indesit.png" />
-							<img src="img/logos/logotipo-junkers.png" />
-							<img src="img/logos/logotipo-lennox.png" />
-							<img src="img/logos/logotipo-lg.png" />
-							<img src="img/logos/logotipo-liebherr.png" />
-							<img src="img/logos/logotipo-manaut.png" />
-							<img src="img/logos/logotipo-mepamsa.png" />
-							<img src="img/logos/logotipo-miele.png" />
-							<img src="img/logos/logotipo-mitsubishi.png" />
-							<img src="img/logos/logotipo-neckar.png" />
-							<img src="img/logos/logotipo-negarra.png" />
-							<img src="img/logos/logotipo-newpol.png" />
-							<img src="img/logos/logotipo-orbegozo.png" />
-							<img src="img/logos/logotipo-otsein.png" />
-							<img src="img/logos/logotipo-panasonic.png" />
-							<img src="img/logos/logotipo-roca.png" />
-							<img src="img/logos/logotipo-saivod.png" />
-							<img src="img/logos/logotipo-samsung.png" />
-							<img src="img/logos/logotipo-saunierduval.png" />
-							<img src="img/logos/logotipo-siemens.png" />
-							<img src="img/logos/logotipo-smeg.png" />
-							<img src="img/logos/logotipo-teka.png" />
-							<img src="img/logos/logotipo-tifell.png" />
-							<img src="img/logos/logotipo-toshiba.png" />
-							<img src="img/logos/logotipo-vaillant.png" />
-							<img src="img/logos/logotipo-viessmann.png" />
-							<img src="img/logos/logotipo-whirlpool.png" />
-							<img src="img/logos/logotipo-wolf.png" />
-							<img src="img/logos/logotipo-zanussi.png" />
-							<img src="img/logos/logotipo-muchasmaz.png" />
+						<div class="col-lg-12 open-hour-wrap calor">
+						    <img src="img/logos/logosCalor.jpg" />
 						</div>
 					</div>
 				</div>	

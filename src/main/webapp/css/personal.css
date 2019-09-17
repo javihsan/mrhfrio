@@ -28,6 +28,10 @@
   width: 22%;
 }
 
+.open-hour-wrap.calor img{
+  width: 87%;
+}
+
 .banner-content img{
   height: 44px;
   border: 1px solid white;
