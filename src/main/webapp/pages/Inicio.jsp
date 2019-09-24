@@ -16,7 +16,7 @@ response.setHeader("Expires", "0");
 		<!-- Author Meta -->
 		<meta name="author" content="colorlib">
 		<!-- Meta Description -->
-		<meta name="description" content="reparacion reparación reparaciones instalación mantenimiento Madrid calderas gas gasoil calentadores termos eléctricos Comunidad de Madrid>
+		<meta name="description" content="reparacion reparación reparaciones Madrid calderas gas gasoil calentadores termos eléctricos Comunidad de Madrid>
 		<!-- Meta Keyword -->
 		<meta name="keywords" content="">
 		<!-- meta character set -->
@@ -73,7 +73,7 @@ response.setHeader("Expires", "0");
 							</a>
 							<a href="tel:670 599 843" class="primary-btn header-btn text-uppercase mt-10">¡Llámenos! 670 599 843</a>
 							<h1>
-								Instalación, mantenimiento y reparación de calderas de gas y gasoil
+								Reparación de calderas de gas, gasoil y termos eléctricos
 							</h1>
 							<p class="text-white mx-auto">
 								Más de 25 años de experiencia. Todas las marcas. Desplazamiento gratuito. Toda la Comunidad de Madrid.	
