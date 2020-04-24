@@ -16,6 +16,22 @@ public class InicioController {
 	@RequestMapping("")
 	private ModelAndView initDefault(HttpServletRequest arg0,
 			HttpServletResponse arg1) throws Exception {
+			
+		ModelAndView mav = new ModelAndView(getView());
+	
+		String path = arg0.getRequestURI();
+		if (path.indexOf(ConstantsController.ADMIN)!=-1){
+			mav = new ModelAndView(getView()+ConstantsController.ADMIN);
+		} else if (path.indexOf(ConstantsController.MANAGER)!=-1){
+			mav = new ModelAndView(getView()+ConstantsController.MANAGER);
+		}
+				
+		return mav;
+	}
+	/*
+	@RequestMapping("")
+	private ModelAndView initDefault(HttpServletRequest arg0,
+			HttpServletResponse arg1) throws Exception {
 		arg1.sendRedirect("/frio");
 		return null;
 
@@ -35,7 +51,7 @@ public class InicioController {
 		}
 				
 		return mav;
-	}
+	}*/
 	
 	public String getView() {
 		return view;
