@@ -7,7 +7,7 @@
 	<artifactId>mrh-frio</artifactId>
 
 	<!-- VERSION -->
-	<version>r8-0-1</version>
+	<version>r8-0-2</version>
 
 	<packaging>war</packaging>
 	<name>${project.artifactId}</name>
@@ -122,7 +122,6 @@
 				<environment>prod</environment>
 				<module.instance.type>${default.prod.type}</module.instance.type>
 				<web.xml.filename>web.xml</web.xml.filename>
-				 <module.scaling.type><![CDATA[<automatic-scaling/>]]></module.scaling.type>
 			</properties>
 		</profile>
 	</profiles>
@@ -290,29 +289,8 @@
 				</configuration>
 			</plugin>
 
-			<!-- WAR plugin -->
-			<!-- Make the package directory and war file only with content from "dist" 
-				directory filtering files to replace with properties values from pom.xml 
-				and excluding profile files. -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>${maven.war.plugin.version}</version>
-				<configuration>
-					<warSourceExcludes>**</warSourceExcludes>
-					<webResources>
-						<webResource>
-							<directory>${target.dist.temp.folder}</directory>
-							<filtering>true</filtering>
-							<excludes>${excludedFiles}</excludes>
-						</webResource>
-					</webResources>
-				</configuration>
-			</plugin>
-
-
 			<!-- AppEngine plugin -->
-			<plugin>
+			<!--<plugin>
 				<groupId>com.google.appengine</groupId>
 				<artifactId>appengine-maven-plugin</artifactId>
 				<version>${appengine.target.version}</version>
@@ -332,7 +310,29 @@
 						<jvmFlag>-XX:MaxPermSize=512m</jvmFlag>
 					</jvmFlags>
 				</configuration>
-			</plugin>
+			</plugin>-->
+			
+			<plugin>
+	            <groupId>com.google.cloud.tools</groupId>
+	            <artifactId>appengine-maven-plugin</artifactId>
+	            <version>2.2.0</version>
+	            <configuration>
+	            	<!--<services>target/${project.artifactId}</services>-->
+	                <projectId>${appengine.app.name}</projectId>
+	                <version>${appengine.app.version}</version>
+	                <host>0.0.0.0</host>
+	                <port>${local.port}</port>
+	                <jvmFlags>
+						<jvmFlag>
+							-Ddatastore.backing_store=${project.basedir}/local_db.bin
+						</jvmFlag>
+						<jvmFlag>
+							-DLocalSearchService.useDirectory=${project.basedir}
+						</jvmFlag>
+						<jvmFlag>-XX:MaxPermSize=512m</jvmFlag>
+					</jvmFlags>
+				</configuration>
+	        </plugin>
 		</plugins>
 	</build>
 </project>
