@@ -65,7 +65,7 @@ response.setHeader("Expires", "0");
 			<!-- start banner Area -->
 			<section class="banner-area relative" id="home">
 				<div class="overlay overlay-bg"></div>
-				<div class="container">
+				<div class="container frio">
 					<div class="row fullscreen d-flex justify-content-center align-items-center">
 						<div class="banner-content col-lg-9 col-md-12 justify-content-center">
 							<a href="tel:670 599 843">
