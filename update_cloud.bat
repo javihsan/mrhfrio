@@ -1,4 +1,5 @@
-SET PATH=C:\GCloudSDK\google-cloud-sdk\bin;C:\openjdk_1.8.0\bin;%PATH%;
-mvn clean package -P prod
+SET PATH=C:\Users\fjsanchez\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\jdk-11.0.0.1\bin;%PATH%;
 gcloud config set project mrh-frio
-gcloud app deploy .\target\mrh-frio\WEB-INF\appengine-web.xml --version=r8-0-3 --no-stop-previous-version --no-promote
+mvn package appengine:deploy -P prod
+gcloud app deploy .\target\mrh-frio\WEB-INF\appengine-web.xml --version=r8-0-5 --no-stop-previous-version --no-promote
+gcloud app deploy .\target\mrh-frio\WEB-INF\cron.yaml

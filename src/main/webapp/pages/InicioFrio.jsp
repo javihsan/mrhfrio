@@ -16,7 +16,7 @@ response.setHeader("Expires", "0");
 		<!-- Author Meta -->
 		<meta name="author" content="colorlib">
 		<!-- Meta Description -->
-		<meta name="description" content="reparacion reparación reparaciones Madrid aire acondicionado frio frío equipo mantenimiento Comunidad de Madrid>
+		<meta name="description" content="reparacion reparación reparaciones Madrid aire acondicionado frio frío equipo mantenimiento Comunidad de Madrid">
 		<!-- Meta Keyword -->
 		<meta name="keywords" content="">
 		<!-- meta character set -->

@@ -16,7 +16,7 @@ response.setHeader("Expires", "0");
 		<!-- Author Meta -->
 		<meta name="author" content="colorlib">
 		<!-- Meta Description -->
-		<meta name="description" content="reparacion reparación reparaciones Madrid calderas gas gasoil calentadores termos eléctricos Comunidad de Madrid>
+		<meta name="description" content="reparacion reparación reparaciones Madrid calderas gas gasoil calentadores termos eléctricos Comunidad de Madrid">
 		<!-- Meta Keyword -->
 		<meta name="keywords" content="">
 		<!-- meta character set -->

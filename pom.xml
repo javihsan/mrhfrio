@@ -7,7 +7,7 @@
 	<artifactId>mrh-frio</artifactId>
 
 	<!-- VERSION -->
-	<version>r8-0-2</version>
+	<version>r11-0-frio</version>
 
 	<packaging>war</packaging>
 	<name>${project.artifactId}</name>
@@ -34,8 +34,9 @@
 		<target.dist.temp.folder>${project.build.directory}/dist</target.dist.temp.folder>
 
 		<!-- Dependencies versions -->
-		<appengine.target.version>1.9.60</appengine.target.version>
-		<servlet.api.version>2.5</servlet.api.version>
+		<appengine.target.version>2.0.5</appengine.target.version>
+		<jetty.version>9.4.35.v20201120</jetty.version>
+		<servlet.api.version>4.0.1</servlet.api.version>
 		<spring.version>3.0.3.RELEASE</spring.version>
 		<junit.version>4.12</junit.version>
 		<mockito.version>1.10.19</mockito.version>
@@ -45,7 +46,7 @@
 		<maven.minimum.version>3.3.0</maven.minimum.version>
 		<maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
 		<maven.replacer.plugin.version>1.5.3</maven.replacer.plugin.version>
-		<maven.war.plugin.version>2.6</maven.war.plugin.version>
+		<maven.war.plugin.version>3.4.0</maven.war.plugin.version>
 		<maven.resources.plugin.version>3.0.1</maven.resources.plugin.version>
 		<maven.exec.plugin.version>1.4.0</maven.exec.plugin.version>
 		<maven.builder.helper.plugin.version>1.10</maven.builder.helper.plugin.version>
@@ -53,13 +54,13 @@
 		<maven.antrun.plugin.version>1.8</maven.antrun.plugin.version>
 
 		<!-- Compiler configuration -->
-		<java.source>1.8</java.source>
-		<java.target>1.8</java.target>
-		<java.runtime>java8</java.runtime>
+		<java.source>11</java.source>
+		<java.target>11</java.target>
+		<java.runtime>java11</java.runtime>
 		
 		<module>default</module>
 		<module.package>com/${base.package}/**/*.java</module.package>
-
+				
 	</properties>
 	<profiles>
 		<profile>
@@ -77,12 +78,20 @@
 			<build>
 				<plugins>
 					<plugin>
-						<groupId>com.google.appengine</groupId>
-						<artifactId>appengine-maven-plugin</artifactId>
-						<version>${appengine.target.version}</version>
-						<configuration>
-							<jvmFlags>
-								<jvmFlag>-Xdebug</jvmFlag>
+			            <groupId>com.google.cloud.tools</groupId>
+			            <artifactId>appengine-maven-plugin</artifactId>
+			            <version>2.7.0</version>
+			            <configuration>
+			            	<!--<services>target/${project.artifactId}</services>-->
+			                <projectId>${appengine.app.name}</projectId>
+			                <version>${appengine.app.version}</version>
+			                <deploy.stopPreviousVersion>false</deploy.stopPreviousVersion>
+			                <host>0.0.0.0</host>
+			                <deploy.stopPreviousVersion>false</deploy.stopPreviousVersion>
+	                		<deploy.promote>false</deploy.promote>
+	                		<port>${local.port}</port>
+			                <jvmFlags>
+			                	<jvmFlag>-Xdebug</jvmFlag>
 								<jvmFlag>
 									-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n
 								</jvmFlag>
@@ -92,13 +101,10 @@
 								<jvmFlag>
 									-DLocalSearchService.useDirectory=${project.basedir}
 								</jvmFlag>
-								<jvmFlag>-XX:MaxPermSize=512m</jvmFlag>
 							</jvmFlags>
-							<disableUpdateCheck>true</disableUpdateCheck>
-							<fullScanSeconds>2</fullScanSeconds>
 						</configuration>
-					</plugin>
-				</plugins>
+			        </plugin>
+			 	</plugins>
 			</build>
 		</profile>
 		<profile>
@@ -122,7 +128,7 @@
 				<environment>prod</environment>
 				<module.instance.type>${default.prod.type}</module.instance.type>
 				<web.xml.filename>web.xml</web.xml.filename>
-				<module.scaling.type><![CDATA[<automatic-scaling/>]]></module.scaling.type>
+				<!--<module.scaling.type><![CDATA[<automatic-scaling/>]]></module.scaling.type>-->
 			</properties>
 		</profile>
 	</profiles>
@@ -153,13 +159,25 @@
 			<version>1.8.3</version>
 		</dependency>
 
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
-		</dependency>
-
- 		
+	 	<!-- Java Servlets API -->
+	    <dependency>
+	      <groupId>javax.servlet</groupId>
+	      <artifactId>javax.servlet-api</artifactId>
+	      <version>${servlet.api.version}</version>
+	    </dependency>
+    		
+    	<!-- Jetty -->
+	    <dependency>
+	      <groupId>org.eclipse.jetty</groupId>
+	      <artifactId>jetty-server</artifactId>
+	      <version>${jetty.version}</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>org.eclipse.jetty</groupId>
+	      <artifactId>jetty-annotations</artifactId>
+	      <version>${jetty.version}</version>
+	    </dependency>	
+    		
 		<dependency>
 		    <groupId>org.eclipse.persistence</groupId>
 		    <artifactId>javax.persistence</artifactId>
@@ -291,36 +309,17 @@
 			</plugin>
 
 			<!-- AppEngine plugin -->
-			<plugin>
-				<groupId>com.google.appengine</groupId>
-				<artifactId>appengine-maven-plugin</artifactId>
-				<version>${appengine.target.version}</version>
-				<configuration>
-					<address>0.0.0.0</address>
-					<port>${local.port}</port>
-					<oauth2>true</oauth2>
-					<disableUpdateCheck>true</disableUpdateCheck>
-					<noCookies>true</noCookies>
-					<jvmFlags>
-						<jvmFlag>
-							-Ddatastore.backing_store=${project.basedir}/local_db.bin
-						</jvmFlag>
-						<jvmFlag>
-							-DLocalSearchService.useDirectory=${project.basedir}
-						</jvmFlag>
-						<jvmFlag>-XX:MaxPermSize=512m</jvmFlag>
-					</jvmFlags>
-				</configuration>
-			</plugin>
-			
+		
 			<plugin>
 	            <groupId>com.google.cloud.tools</groupId>
 	            <artifactId>appengine-maven-plugin</artifactId>
-	            <version>2.2.0</version>
+	            <version>2.7.0</version>
 	            <configuration>
 	            	<!--<services>target/${project.artifactId}</services>-->
 	                <projectId>${appengine.app.name}</projectId>
 	                <version>${appengine.app.version}</version>
+	                <deploy.stopPreviousVersion>false</deploy.stopPreviousVersion>
+	                <deploy.promote>false</deploy.promote>
 	                <host>0.0.0.0</host>
 	                <port>${local.port}</port>
 	                <jvmFlags>
@@ -330,7 +329,6 @@
 						<jvmFlag>
 							-DLocalSearchService.useDirectory=${project.basedir}
 						</jvmFlag>
-						<jvmFlag>-XX:MaxPermSize=512m</jvmFlag>
 					</jvmFlags>
 				</configuration>
 	        </plugin>

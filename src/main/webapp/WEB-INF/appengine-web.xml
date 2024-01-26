@@ -3,14 +3,14 @@
     <application>${appengine.app.name}</application> 
     <version>${appengine.app.version}</version>
     <runtime>${java.runtime}</runtime>
+    <app-engine-apis>true</app-engine-apis>
     <!-- Allows App Engine to send multiple requests to one instance in parallel: -->
-    <threadsafe>true</threadsafe>
+    <!--<threadsafe>true</threadsafe>-->
     <sessions-enabled>true</sessions-enabled>
     <!-- Module's name -->
-    <module>${module}</module>
+    <service>${module}</service>
     <instance-class>${module.instance.type}</instance-class>
-    ${module.scaling.type}
-	<!-- Logging configuration -->
+    <!-- Logging configuration -->
     <system-properties>
 		<property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
 		<property name="file.encoding" value="ISO-8859-1" />
@@ -28,5 +28,7 @@
         <include path="/**.json"/>
         <include path="/**.ttf"/>
         <include path="/**.ico"/>
+        <include path="/**.svg"/>
+        <include path="/**.jpg"/>
     </static-files>
 </appengine-web-app>

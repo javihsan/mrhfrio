@@ -18,6 +18,15 @@
 #header{
   padding-bottom: 0;
 }
+
+.promotion-area{
+  margin-top: -125px;
+}
+
+.promotion-div{
+  background-color: #f7e8af38;
+}
+
 .open-hour-wrap{
   display: flex;
   flex-direction: row;
@@ -38,7 +47,7 @@
   margin-top: -2px;
 }
 .open-hour-area{
-  margin-top: -50px;
+  margin-top: -150px;
 }
 
 .feature-area.section-gap,
