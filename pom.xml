@@ -7,7 +7,7 @@
 	<artifactId>mrh-frio</artifactId>
 
 	<!-- VERSION -->
-	<version>r17-0-calor</version>
+	<version>r17-0-frio</version>
 
 	<packaging>war</packaging>
 	<name>${project.artifactId}</name>
