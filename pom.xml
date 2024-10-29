@@ -7,7 +7,7 @@
 	<artifactId>mrh-frio</artifactId>
 
 	<!-- VERSION -->
-	<version>r17-0-frio</version>
+	<version>r21-0-frio</version>
 
 	<packaging>war</packaging>
 	<name>${project.artifactId}</name>
@@ -34,13 +34,14 @@
 		<target.dist.temp.folder>${project.build.directory}/dist</target.dist.temp.folder>
 
 		<!-- Dependencies versions -->
-		<appengine.target.version>2.0.5</appengine.target.version>
-		<jetty.version>9.4.35.v20201120</jetty.version>
-		<servlet.api.version>4.0.1</servlet.api.version>
-		<spring.version>3.0.3.RELEASE</spring.version>
+		<appengine.target.version>2.0.31</appengine.target.version>
+		<appengine.maven.plugin.version>2.8.1</appengine.maven.plugin.version>
+		<jetty.version>12.0.13</jetty.version>
+		<spring.version>6.1.14</spring.version>
+		<spring.security.version>6.3.4</spring.security.version>
 		<junit.version>4.12</junit.version>
 		<mockito.version>1.10.19</mockito.version>
-		<datanucleus.jpa.version>3.1.3</datanucleus.jpa.version>
+		<datanucleus.jpa.version>6.0.1</datanucleus.jpa.version>
 
 		<!-- Plugins versions -->
 		<maven.minimum.version>3.3.0</maven.minimum.version>
@@ -54,9 +55,9 @@
 		<maven.antrun.plugin.version>1.8</maven.antrun.plugin.version>
 
 		<!-- Compiler configuration -->
-		<java.source>17</java.source>
-		<java.target>17</java.target>
-		<java.runtime>java17</java.runtime>
+		<java.source>21</java.source>
+		<java.target>21</java.target>
+		<java.runtime>java21</java.runtime>
 		
 		<module>default</module>
 		<module.package>com/${base.package}/**/*.java</module.package>
@@ -80,7 +81,7 @@
 					<plugin>
 			            <groupId>com.google.cloud.tools</groupId>
 			            <artifactId>appengine-maven-plugin</artifactId>
-			            <version>2.7.0</version>
+			            <version>${appengine.maven.plugin.version}</version>
 			            <configuration>
 			            	<!--<services>target/${project.artifactId}</services>-->
 			                <projectId>${appengine.app.name}</projectId>
@@ -132,7 +133,9 @@
 			</properties>
 		</profile>
 	</profiles>
+	
 	<dependencies>
+		
 		<!-- AppEngine -->
 		<dependency>
 			<groupId>com.google.appengine</groupId>
@@ -158,43 +161,19 @@
 			<artifactId>commons-beanutils</artifactId>
 			<version>1.8.3</version>
 		</dependency>
-
-	 	<!-- Java Servlets API -->
+	    
+	   <!-- https://mvnrepository.com/artifact/org.eclipse.jetty.ee10/jetty-ee10-servlets -->
+		<dependency>
+		    <groupId>org.eclipse.jetty.ee10</groupId>
+		    <artifactId>jetty-ee10-servlets</artifactId>
+		   <version>${jetty.version}</version>
+		</dependency>
 	    <dependency>
-	      <groupId>javax.servlet</groupId>
-	      <artifactId>javax.servlet-api</artifactId>
-	      <version>${servlet.api.version}</version>
-	    </dependency>
-    		
-    	<!-- Jetty -->
-	    <dependency>
-	      <groupId>org.eclipse.jetty</groupId>
-	      <artifactId>jetty-server</artifactId>
+	      <groupId>org.eclipse.jetty.ee10</groupId>
+	      <artifactId>jetty-ee10-annotations</artifactId>
 	      <version>${jetty.version}</version>
 	    </dependency>
 	    
-	    <dependency>
-	      <groupId>org.eclipse.jetty</groupId>
-	      <artifactId>jetty-annotations</artifactId>
-	      <version>${jetty.version}</version>
-	      <exclusions>
-	      	<exclusion>
-	      	 	<groupId>org.ow2.asm</groupId>
-	     	 	<artifactId>asm</artifactId>
-	 		</exclusion>
-	 		<exclusion>
-	      	 	<groupId>org.ow2.asm</groupId>
-	     	 	<artifactId>asm-commons</artifactId>
-	 		</exclusion>
-	      </exclusions>
-	    </dependency>	 
-    		<!--
-		<dependency>
-		    <groupId>org.eclipse.persistence</groupId>
-		    <artifactId>javax.persistence</artifactId>
-		    <version>2.0.0</version>
-		</dependency>-->
-	
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -214,13 +193,18 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
-			<version>${spring.version}</version>
+			<version>${spring.security.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
-			<version>${spring.version}</version>
+			<version>${spring.security.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>		
 
 		<!-- Test -->
 		<dependency>
@@ -324,7 +308,7 @@
 			<plugin>
 	            <groupId>com.google.cloud.tools</groupId>
 	            <artifactId>appengine-maven-plugin</artifactId>
-	            <version>2.7.0</version>
+	            <version>${appengine.maven.plugin.version}</version>
 	            <configuration>
 	            	<!--<services>target/${project.artifactId}</services>-->
 	                <projectId>${appengine.app.name}</projectId>
